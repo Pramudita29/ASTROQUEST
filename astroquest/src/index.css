@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --primary-yellow: #FFD369;
   --text-gray: #707070;
@@ -26,6 +27,10 @@ body {
   /* Optional default bg */
   color: #213547;
   /* Optional default text */
+}
+
+body {
+  font-family: 'Inknut Antiqua', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 a {
@@ -77,4 +82,49 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+/* Perspective on the parent container */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Preserve 3D transformation on the card */
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Rotate card 180 degrees on the Y-axis */
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
